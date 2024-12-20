@@ -1,0 +1,6 @@
+@import "base.css";
+
+h1 {
+    background: var(--color-charcoal);
+    color: var(--color-light-gray);
+}

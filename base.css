@@ -1,0 +1,119 @@
+/* CSS RESET */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+a {
+    /* 10. Remove default link styles */
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 11. Remove default button styles */
+button {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/* 12. Remove default list styles */
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 13. Remove default table styles */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 14. Remove default form styles */
+input, textarea, select {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+input::placeholder, textarea::placeholder {
+    color: inherit;
+    font-size: inherit;
+}
+
+/* 15. Remove default fieldset styles */
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* VARIABLES */
+
+:root {
+    --color-black: #1D1D1F;
+    --color-charcoal: #394150;
+    --color-light-gray: #D2D5DA;
+    --color-very-light-gray: #F3F4F6;
+    --color-white: #FFFFFF;
+    --color-muted-gray: #E5E7EB;
+}
