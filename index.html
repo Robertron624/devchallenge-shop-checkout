@@ -64,7 +64,7 @@
     Enter first & last name
     
     Email Address
-    
+
     Enter email address
     
     Country
@@ -77,6 +77,167 @@
     
     Continue
      -->
-  <h1>Checkout</h1>
+  <main>
+    <div class="top-section">
+      <div class="text">
+        <h1>Checkout</h1>
+        <p>3 ITEMS</p>
+      </div>
+    </div>
+    <div class="container mx-auto">
+      <section class="cart px-6 py-6">
+          <ul class="cart-items flex flex-col">
+            <li class="cart-item">
+              <div class="item-image flex justify-center items-center">
+                <img src="resources/images/Gold@2x.png" alt="iPhone 12 Pro" />
+              </div>
+              <div class="item-info-quantity flex flex-col justify-between">
+                <div class="item-info">
+                    <h4 class="item-name font-bold">iPhone 12 Pro</h4>
+                    <p class="item-color font-semibold">Golden</p>
+                  </div>
+                <div class="quantity">
+                    <p>x 1</p>
+                </div>
+              </div>
+              <div class="item-price-remove flex flex-col justify-between">
+                  <p class="item-price font-bold">
+                    $999.00
+                  </p>
+                <button class="remove">
+                  X
+                </button>
+              </div>
+            </li>
+            <li class="cart-item">
+                <div class="item-image flex justify-center items-center">
+                  <img src="/resources/images/Apple-watchx2.png"/>
+                </div>
+                <div class="item-info-quantity flex flex-col justify-between">
+                  <div class="item-info">
+                      <h4 class="item-name font-bold">Apple Watch</h4>
+                      <p class="item-color font-semibold">Blue</p>
+                    </div>
+                    <div class="quantity">
+                        <p>x 1</p>
+                    </div>
+                </div>
+                <div class="item-price
+                -remove flex flex-col justify-between">
+                    <p class="item-price font-bold">
+                      $399.00
+                    </p>
+                    <button class="remove">
+                        X
+                    </button>
+                </div>
+            </li>
+            <li class="cart-item">
+                <div class="item-image flex justify-center items-center">
+                  <img src="/resources/images/iMac@2x.png"/>
+                </div>
+                <div class="item-info-quantity flex flex-col justify-between">
+                  <div class="item-info">
+                      <h4 class="item-name font-bold">iMac</h4>
+                      <p class="item-color font-semibold">Green</p>
+                    </div>
+                    <div class="quantity">
+                        <p>x 1</p>
+                    </div>
+                </div>
+                <div class="item-price remove flex flex-col justify-between">
+                    <p class="item-price font-bold">
+                      $1199.00
+                    </p>
+                    <button class="remove">
+                        X
+                    </button>
+                </div>
+            </li>
+          </ul>
+          <div class="coupon">
+                <label class="sr-only" for="coupon-code">Enter coupon code</label>
+              <input id="coupon-code" type="text" placeholder="Enter coupon code" />
+              <button>Apply Coupon</button>
+          </div>
+          <div class="total">
+              <div class="subtotal">
+              <p>Sub total</p>
+              <p>$2597.00</p>
+              </div>
+              <div class="tax">
+              <p>Tax</p>
+              <p>$623.28</p>
+              </div>
+              <div class="total-amount">
+              <p>Total</p>
+              <p>$3220.28</p>
+              </div>
+          </div>
+      </section>
+      <section class="contact-info px-6 py-6">
+        <form aria-labelledby="contact-info">
+          <fieldset>
+            <legend id="form-title">
+                <h2>Contact Information</h2>
+            </legend>
+
+            <div>
+              <label for="name">First & Last Name</label>
+              <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Enter first & last name"
+                      required
+                      aria-required="true"
+              />
+            </div>
+
+            <div>
+              <label for="email">Email Address</label>
+              <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Enter email address"
+                      required
+                      aria-required="true"
+              />
+            </div>
+            <div class="country-zip">
+              <div>
+                <label for="country">Country</label>
+                <select id="country" name="country" aria-label="Select your country">
+                  <option value="">Select a country</option>
+                  <option value="Finland">Finland</option>
+                  <option value="USA">USA</option>
+                  <option value="UK">UK</option>
+                  <option value="Germany">Germany</option>
+                  <option value="France">France</option>
+                </select>
+              </div>
+              <div>
+                <label for="postal">Postal Code</label>
+                <input
+                        type="text"
+                        id="postal"
+                        name="postal"
+                        placeholder="00270"
+                        pattern="\d{5}"
+                        aria-describedby="postal-hint"
+                        required
+                        aria-required="true"
+                />
+                <small id="postal-hint">Enter a 5-digit postal code.</small>
+              </div>
+            </div>
+
+            <button type="submit" aria-label="Submit the form">Continue</button>
+          </fieldset>
+        </form>
+      </section>
+    </div>
+  </main>
   </body>
 </html>
