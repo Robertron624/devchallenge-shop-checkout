@@ -230,11 +230,83 @@
                 </div>
               </div>
             </div>
-            <button class="font-bold" type="submit" aria-label="Submit the form">Continue</button>
+            <button class="font-bold w-full" type="submit" aria-label="Submit the form">Continue</button>
           </fieldset>
         </form>
       </section>
     </div>
   </main>
+  <script>
+
+    function getPrice(price){
+      // Remove $ sign, white spaces and convert to number
+      return parseFloat(price.replace('$', ''));
+    }
+
+    function getQuantity(quantity){
+      // Remove X sign, white spaces and convert to number
+      return parseInt(quantity.replace('x', ''));
+    }
+
+    function getItemsInCart(){
+      const cartItems = document.querySelectorAll('.cart-item');
+      const items = [];
+      cartItems.forEach((item) => {
+        const productId = item.getAttribute('data-product-id');
+        const name = item.querySelector('.item-name').textContent;
+        const color = item.querySelector('.item-color').textContent;
+        const price = getPrice(item.querySelector('.item-price').textContent);
+        const quantity = getQuantity(item.querySelector('.quantity').textContent);
+        items.push({
+          productId,
+          name,
+          color,
+          price,
+          quantity
+        });
+      });
+      return items;
+    }
+
+    const removeButtons = document.querySelectorAll('.remove');
+    removeButtons.forEach((button) => {
+      button.addEventListener('click', (e) => {
+        const productId = e.target.getAttribute('data-productId');
+        const product = document.querySelector(`[data-product-id="${productId}"]`);
+        product.remove();
+      });
+    });
+
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const userData = Object.fromEntries(formData.entries());
+
+      const items = getItemsInCart();
+
+      const order = {
+        userData,
+        items
+      };
+
+      console.log(order);
+
+      // Reset form
+      form.reset();
+      
+    });
+
+    // Apply coupon
+    const applyCoupon = document.querySelector('.coupon button');
+
+    applyCoupon.addEventListener('click', () => {
+      const couponCodeInput = document.querySelector('#coupon-code');
+      const couponCode = couponCodeInput.value;
+      console.log(couponCode);
+      couponCodeInput.value = '';
+    });
+  </script>
   </body>
 </html>
