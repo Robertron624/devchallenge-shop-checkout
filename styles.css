@@ -57,25 +57,29 @@ main {
 }
 
 .container .cart .cart-items {
-    gap: 1rem;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--color-light-gray);
+    padding-bottom: 1.5rem;
 }
 
 .container .cart .cart-items .cart-item {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
-    border-bottom: 1px solid var(--color-light-gray);
+    height: 8rem;
 }
 
 .cart-item .item-image {
     object-fit: cover;
     border-radius: 1rem;
     background-color: var(--color-white);
-    padding-block: .4rem;
+    width: 7rem;
+    height: 8rem;
 }
 
 .cart-item .item-image img {
-    max-width: 52px;
+    max-width: 5rem;
+    max-height: 5rem;
 }
 
 .cart-item .item-info .product-name{
@@ -94,6 +98,50 @@ main {
 .cart-item .item-price-remove .remove {
     font-size: 1rem;
     color: var(--color-charcoal);
+}
+
+/* Coupon */
+
+.container .coupon {
+    margin-top: 1.5rem;
+    gap: .5rem;
+    --coupon-padding: .65rem;
+    --coupon-font-size: .85rem;
+}
+
+.container .coupon input{
+    background-color: var(--color-white);
+    padding: var(--coupon-padding);
+    color: var(--color-charcoal);
+    width: 55%;
+    border-radius: .5rem;
+    font-size: var(--coupon-font-size);
+}
+
+.container .coupon button {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: var(--coupon-padding);
+    border-radius: .5rem;
+    font-size: 1rem;
+    width: 45%;
+    font-size: var(--coupon-font-size);
+}
+
+/* Total */
+
+.container .cart .total {
+    margin-top: 1rem;
+}
+
+.cart .total .subtotal,
+.cart .total .tax
+{
+    color: var(--color-charcoal);
+}
+
+.cart .total .tax {
+    margin: .5rem 0;
 }
 
 /* Form */
