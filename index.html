@@ -181,56 +181,56 @@
             <legend id="form-title">
                 <h2>Contact Information</h2>
             </legend>
-            <div>
-              <label for="name">First & Last Name</label>
-              <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Enter first & last name"
-                      required
-                      aria-required="true"
-              />
-            </div>
-            <div>
-              <label for="email">Email Address</label>
-              <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="Enter email address"
-                      required
-                      aria-required="true"
-              />
-            </div>
-            <div class="country-zip">
-              <div>
-                <label for="country">Country</label>
-                <select id="country" name="country" aria-label="Select your country">
-                  <option value="">Select a country</option>
-                  <option value="Finland">Finland</option>
-                  <option value="USA">USA</option>
-                  <option value="UK">UK</option>
-                  <option value="Germany">Germany</option>
-                  <option value="France">France</option>
-                </select>
-              </div>
-              <div>
-                <label for="postal">Postal Code</label>
+            <div class="form-groups">
+              <div class="form-group flex flex-col">
+                <label class="font-semibold" for="name">First & Last Name</label>
                 <input
                         type="text"
-                        id="postal"
-                        name="postal"
-                        placeholder="00270"
-                        pattern="\d{5}"
-                        aria-describedby="postal-hint"
+                        id="name"
+                        name="name"
+                        placeholder="Enter first & last name"
                         required
                         aria-required="true"
                 />
-                <small id="postal-hint">Enter a 5-digit postal code.</small>
+              </div>
+              <div class="form-group flex flex-col">
+                <label class="font-semibold" for="email">Email Address</label>
+                <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter email address"
+                        required
+                        aria-required="true"
+                />
+              </div>
+              <div class="country-zip flex justify-between w-full">
+                <div class="country-wrapper form-group flex flex-col">
+                  <label class="font-semibold" for="country">Country</label>
+                  <select id="country" name="country" aria-label="Select your country">
+                    <option value="Finland">Finland</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                    <option value="Germany">Germany</option>
+                    <option value="France">France</option>
+                  </select>
+                </div>
+                <div class="zip-wrapper form-group flex flex-col">
+                  <label class="font-semibold" for="postal">Postal Code</label>
+                  <input
+                          type="text"
+                          id="postal"
+                          name="postal"
+                          placeholder="00270"
+                          pattern="\d{5}"
+                          aria-describedby="postal-hint"
+                          required
+                          aria-required="true"
+                  />
+                </div>
               </div>
             </div>
-            <button type="submit" aria-label="Submit the form">Continue</button>
+            <button class="font-bold" type="submit" aria-label="Submit the form">Continue</button>
           </fieldset>
         </form>
       </section>

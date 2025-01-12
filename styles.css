@@ -144,8 +144,56 @@ main {
     margin: .5rem 0;
 }
 
-/* Form */
+/* CONTACT INFO FORM */
 
 .container .contact-info {
     background-color: var(--color-white);
+}
+
+.contact-info #form-title {
+    font-size: .75rem;
+    padding: 0;
+}
+
+.contact-info .form-groups {
+    margin-top: 1.4rem;
+    display: grid;
+    gap: 1.4rem;
+}
+
+.contact-info .form-group {
+    gap: .5rem;
+}
+
+.contact-info .form-group label {
+    font-size: .875rem;
+}
+
+.contact-info .form-group select,
+.contact-info .form-group input {
+    background-color: var(--color-very-light-gray);
+    color: var(--color-charcoal);
+    border: 1px solid var(--color-light-gray);
+    padding: .65rem;
+    border-radius: .4rem;
+    font-size: .875rem;
+    font-weight: 600;
+}
+
+.contact-info .country-zip .country-wrapper {
+    width: 40%;
+}
+
+.contact-info .country-zip .zip-wrapper {
+    width: 42%;
+}
+
+.contact-info button[type="submit"] {
+    width: 100%;
+    margin-top: 2rem;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-size: 1rem;
+    border-radius: .5rem;
+    padding: .85rem 0;
 }
