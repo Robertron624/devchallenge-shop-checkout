@@ -16,67 +16,6 @@
     <title>Device Shop Checkout | devChallenges.io</title>
   </head>
   <body>
-    <!--
-    Checkout
-
-    3 items
-
-    iPhone 12 Pro
-
-    Golden
-
-    $999.00
-
-    x 1
-
-    Apple Watch
-
-    Blue
-
-    $399.00
-
-    iMac
-
-    Green
-
-    $1199.00
-
-    Enter coupon code
-
-    Apply Coupon
-
-    Sub total
-
-    $2597.00
-
-    Tax
-
-    $623.28
-
-    Total
-
-    $3220.28
-
-    Contact Information
-
-    First & Last name
-
-    Enter first & last name
-
-    Email Address
-
-    Enter email address
-
-    Country
-
-    Finland
-
-    Postal Code
-
-    00270
-
-    Continue
-     -->
   <main>
     <div class="top-section">
       <div class="text">
@@ -101,10 +40,10 @@
                 </div>
               </div>
               <div class="item-price-remove flex flex-col justify-between">
-                  <p class="item-price font-bold">
+                  <p class="item-price font-bold text-right">
                     $999.00
                   </p>
-                <button class="remove" aria-label="Remove iPhone 12 Pro from cart" data-productId="1">
+                <button class="remove text-right" aria-label="Remove iPhone 12 Pro from cart" data-productId="1">
                   X
                 </button>
               </div>
@@ -124,10 +63,10 @@
                 </div>
                 <div class="item-price
                 -remove flex flex-col justify-between">
-                    <p class="item-price font-bold">
+                    <p class="item-price font-bold text-right">
                       $399.00
                     </p>
-                    <button class="remove" aria-label="Remove Apple Watch from cart" data-productId="2">
+                    <button class="remove text-right" aria-label="Remove Apple Watch from cart" data-productId="2">
                         X
                     </button>
                 </div>
@@ -145,11 +84,11 @@
                         <p>x 1</p>
                     </div>
                 </div>
-                <div class="item-price remove flex flex-col justify-between">
-                    <p class="item-price font-bold">
+                <div class="item-price-remove flex flex-col justify-between">
+                    <p class="item-price font-bold text-right">
                       $1199.00
                     </p>
-                    <button class="remove" aria-label="Remove iMac from cart" data-productId="3">
+                    <button class="remove text-right" aria-label="Remove iMac from cart" data-productId="3">
                         X
                     </button>
                 </div>
@@ -268,14 +207,21 @@
       return items;
     }
 
-    const removeButtons = document.querySelectorAll('.remove');
-    removeButtons.forEach((button) => {
-      button.addEventListener('click', (e) => {
-        const productId = e.target.getAttribute('data-productId');
-        const product = document.querySelector(`[data-product-id="${productId}"]`);
-        product.remove();
-      });
-    });
+    document.querySelector('.cart-items').addEventListener('click', (e) => {
+  if (e.target.classList.contains('remove')) {
+    const productId = e.target.getAttribute('data-productId');
+    console.log(`Product with ID ${productId} will be removed`);
+
+    // Buscar el elemento padre (li.cart-item) y eliminarlo
+    const product = document.querySelector(`[data-product-id="${productId}"]`);
+    if (product) {
+      console.log('Product element ->', product);
+      product.remove();
+    } else {
+      console.error(`Product with ID ${productId} not found`);
+    }
+  }
+});
 
     const form = document.querySelector('form');
 

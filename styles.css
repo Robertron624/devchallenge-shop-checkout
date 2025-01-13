@@ -196,3 +196,92 @@ main {
     border-radius: .5rem;
     padding: .85rem 0;
 }
+
+/* Tablet */
+
+@media screen and (min-width: 1024px) {
+    .top-section {
+        height: 18rem;
+    }
+
+    .top-section .text h1 {
+        font-size: 2rem;
+    }
+
+    .top-section .text p {
+        font-size: .75rem;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container .cart {
+        padding: 2rem;
+    }
+
+
+    .cart-item .item-info .product-name {
+        font-size: 1.5rem;
+    }
+
+    .cart-item .item-info .item-color {
+        font-size: 1.2rem;
+    }
+
+    .cart-item .item-price-remove .item-price {
+        font-size: 1.2rem;
+    }
+
+    .cart-item .item-price-remove .remove {
+        font-size: 1.2rem;
+    }
+
+    .container .coupon {
+        margin-top: 2rem;
+    }
+
+    .container .coupon input {
+        width: 60%;
+    }
+
+    .container .coupon button {
+        width: 40%;
+    }
+
+    .container .contact-info {
+        padding: 2rem;
+    }
+
+    .contact-info .form-groups {
+        margin-top: 2.5rem;
+    }
+
+    .contact-info .form-group {
+        gap: 1rem;
+    }
+
+    .contact-info .form-group label {
+        font-size: 1rem;
+    }
+
+    .contact-info .form-group select,
+    .contact-info .form-group input {
+        padding: .85rem;
+        font-size: 1rem;
+    }
+
+    .contact-info .country-zip .country-wrapper {
+        width: 45%;
+    }
+
+    .contact-info .country-zip .zip-wrapper {
+        width: 45%;
+    }
+
+    .contact-info button[type="submit"] {
+        margin-top: 2.5rem;
+        padding: 1rem 0;
+    }
+}
