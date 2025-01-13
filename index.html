@@ -28,7 +28,10 @@
           <ul class="cart-items flex flex-col">
             <li class="cart-item" role="listitem" data-product-id="1">
               <div class="item-image flex justify-center items-center">
-                <img src="resources/images/Gold@2x.png" alt="iPhone 12 Pro" />
+                <picture>
+                  <source srcset="/resources/images/Gold@2x.png" media="(min-width: 768px)" />
+                  <img src="/resources/images/Gold.png" alt="iPhone 12 Pro" />
+                </picture>
               </div>
               <div class="item-info-quantity flex flex-col justify-between">
                 <div class="item-info">
@@ -50,7 +53,10 @@
             </li>
             <li class="cart-item" role="listitem" data-product-id="2">
                 <div class="item-image flex justify-center items-center">
-                  <img src="/resources/images/Apple-watchx2.png"/>
+                  <picture>
+                    <source srcset="/resources/images/Apple-watchx2.png" media="(min-width: 768px)" />
+                    <img src="/resources/images/Apple-watch.png" alt="Apple Watch" />
+                  </picture>
                 </div>
                 <div class="item-info-quantity flex flex-col justify-between">
                   <div class="item-info">
@@ -73,7 +79,10 @@
             </li>
             <li class="cart-item" role="listitem" data-product-id="3">
                 <div class="item-image flex justify-center items-center">
-                  <img src="/resources/images/iMac@2x.png"/>
+                  <picture>
+                    <source srcset="/resources/images/iMac@2x.png" media="(min-width: 768px)" />
+                    <img src="/resources/images/iMac.png" alt="iMac" />
+                  </picture>
                 </div>
                 <div class="item-info-quantity flex flex-col justify-between">
                   <div class="item-info">

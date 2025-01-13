@@ -50,6 +50,7 @@ main {
     margin-top: -10rem;
     overflow: hidden;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    max-width: 1350px;
 }
 
 .container .cart {
@@ -106,6 +107,7 @@ main {
     margin-top: 1.5rem;
     gap: .5rem;
     --coupon-padding: .65rem;
+    --coupon-padding-desktop: .85rem;
     --coupon-font-size: .85rem;
 }
 
@@ -120,12 +122,23 @@ main {
 
 .container .coupon button {
     background-color: var(--color-black);
+    border: 1px solid var(--color-black);
     color: var(--color-white);
     padding: var(--coupon-padding);
     border-radius: .5rem;
     font-size: 1rem;
     width: 45%;
     font-size: var(--coupon-font-size);
+    transition: background-color .3s, color .3s;
+}
+
+.container .coupon button:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.container .coupon button:focus-visible {
+    outline: 2px solid rgb(145, 44, 44);
 }
 
 /* Total */
@@ -191,10 +204,21 @@ main {
 .contact-info button[type="submit"] {
     margin-top: 2rem;
     background-color: var(--color-black);
+    border: 1px solid var(--color-black);
     color: var(--color-white);
     font-size: 1rem;
     border-radius: .5rem;
     padding: .85rem 0;
+    transition: background-color .3s, color .3s;
+}
+
+.contact-info button[type="submit"]:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.contact-info button[type="submit"]:focus-visible {
+    outline: 2px solid rgb(145, 44, 44);
 }
 
 /* Tablet */
@@ -202,6 +226,7 @@ main {
 @media screen and (min-width: 1024px) {
     .top-section {
         height: 18rem;
+        background-image: url("/resources/images/background-image.png");
     }
 
     .top-section .text h1 {
@@ -244,6 +269,7 @@ main {
 
     .container .coupon input {
         width: 60%;
+        padding: var(--coupon-padding-desktop);
     }
 
     .container .coupon button {
