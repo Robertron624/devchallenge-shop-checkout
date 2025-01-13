@@ -27,58 +27,55 @@
 - [Overview](#overview)
     - [What I learned](#what-i-learned)
     - [Useful resources](#useful-resources)
+    - [How to start](#how-to-start)
 - [Built with](#built-with)
 - [Features](#features)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
+- [Author](#author)
 
 <!-- OVERVIEW -->
 
 ## Overview
-
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
-
-<!--
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
-
-- What have you learned/improved?
-- Your wisdom? :)
--->
+![Screenshot](image.png)
 
 ### What I learned
 
-<!-- Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge. -->
+With this project I practiced my flexbox and grid skills, also I put effort on making the page the most accessible as possible by using semantic HTML, focus states, aria attributes and finally using media queries
+and the picture element to handle the different versions of the product images and the top section image.
 
 ### Useful resources
 
-<!--
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
--->
+- [The Picture element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) - This helped me to use the picture element to handle the different image resolutions
+
+### How to start
+
+To start using this project, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/Robertron624/devchallenge-shop-checkout.git`
+2. Navigate to the project directory: `cd devchallenge-shop-checkout`
+3. Open the index.html file in your preferred browser or use a live server extension in your code editor to run the project.
+
+Now you can see the project running locally on your machine. Happy coding!
 
 ### Built with
 
-<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
-
 - Semantic HTML5 markup
 - CSS custom properties
+- CSS variables
+- CSS Media Queries
 - Flexbox
 - CSS Grid
-- [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
 
 ## Features
 
-<!-- List the features of your application or follow the template. Don't share the figma file here :) -->
+- User can see a cart with a list of products with their corresponding information(price, quantity, etc.)
+- User can remove products from the cart
+- User can view the total price of the products in the cart
+- User can see a form where they can enter their personal information for shipping
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges-dashboard) challenge.
 
-## Acknowledgements
-
-<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
 
 ## Author
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
+- Website [robert-ramirez.netlify.app](https://robert-ramirez.netlify.app/)
+- GitHub [Robertron624](https://github.com/Robertron624)
